@@ -1,0 +1,33 @@
+.product{
+   
+    height: 360px;
+    position: relative;
+}
+.product .immg{
+
+   width: 128px;
+   height: 226px;
+   transition: all 0.2s ;
+   
+}
+.immg:hover{
+    transform: scale(1.05)
+}
+
+.add{
+    
+   
+    position: absolute;
+ 
+   bottom: 0.1rem;
+    left: 0.2rem;
+    right: 0.2rem;
+   
+  
+    opacity: 0;
+    transition: all ;
+}
+
+.product:hover .add{
+    opacity: 1;
+}
