@@ -3,9 +3,9 @@ import axios from "axios";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import styles from './products.module.css'
+
 import Home from '../Home/Home'
-import { Link, useParams } from 'react-router-dom';
+
 import { useAuth } from '../../Context/global';
 
 
@@ -14,7 +14,7 @@ import { useAuth } from '../../Context/global';
 export default function Makeup() {
     let [products, setProducts] = useState([])
     const {addToCart,cart}=useAuth()
-    const params= useParams()
+   
    
 
     useEffect(() => {
@@ -27,7 +27,7 @@ export default function Makeup() {
       const options = {
         method: 'GET',
         url: 'https://sephora.p.rapidapi.com/products/list',
-        params: {categoryId: params.id, pageSize: '60', currentPage: '1'},
+        params: {categoryId: "cat140006", pageSize: '60', currentPage: '1'},
         headers: {
           'X-RapidAPI-Key': 'bcf01d03cbmsh149668e9058105ap1e5e3djsnc9e0c8202f3e',
           'X-RapidAPI-Host': 'sephora.p.rapidapi.com'
@@ -50,18 +50,18 @@ export default function Makeup() {
       <div className='container  py-5'>
  
         <div className="row g-5">
-            {products.map((product,index)=><div key={index} className="col-lg-3 col-md-4 text-center ">
+            {products.map((product,index)=><div key={index} className="col-lg-3 col-md-4 col-sm-6 text-center  ">
              
           
-                <div className= {`nav-link cursor border py-3 ${styles.product}`}>
-                <img className={styles.immg} src={product.heroImage} alt="product"/>  
+                <div className= {`nav-link cursor border py-1 product `}>
+                <img className={`image`} src={product.heroImage?product.heroImage:""} alt="product"/>  
                 
                 
-                <p className='mt-2  px-2'>{product.displayName?.split(" ").slice(0,3).join(" ")}</p>
+                <p className='mt-2  px-2'>{product.displayName?.split(" ").slice(0,2).join(" ")}</p>
 
                 <p>{product.currentSku.listPrice}</p>
 
-                <button onClick={()=>{if(cart) {addToCart(product);}}} className={`${styles.add} btn btn-dark`}>Add To Cart</button>
+                <button onClick={()=>{if(cart) {addToCart(product);}}} className={` add btn btn-dark`}>Add To Cart</button>
 
                
                 </div>

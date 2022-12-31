@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from "axios";
-import styles from './products.module.css'
+
 import Home from '../Home/Home'
 import { Link, useParams } from 'react-router-dom';
 import { useAuth } from '../../Context/global';
@@ -39,20 +39,20 @@ export default function Hair() {
   return (
     <>
     <Home/>
-      <div className='container my-5 py-5'>
+      <div className='container py-5'>
       <div className="row g-5">
             {products.map((product,index)=><div key={index} className="col-lg-3 col-md-4 text-center ">
              
           
-                <div className= {`nav-link cursor border py-3 ${styles.product}`}>
-                <img className={styles.immg} src={product.heroImage} alt="product"/>  
+                <div className= {`nav-link cursor border py-1 product `}>
+                <img className='image' src={product.heroImage} alt="product"/>  
                 
                 
-                <p className='mt-2  px-2'>{product.displayName?.split(" ").slice(0,3).join(" ")}</p>
+                <p className='mt-2  px-2'>{product.displayName?.split(" ").slice(0,2).join(" ")}</p>
 
                 <p>{product.currentSku.listPrice}</p>
 
-                <button onClick={()=>{if(cart) {addToCart(product);}}} className={`${styles.add} btn btn-dark`}>Add To Cart</button>
+                <button onClick={()=>{if(cart) {addToCart(product);}}} className={` btn btn-dark`}>Add To Cart</button>
 
                
                 </div>

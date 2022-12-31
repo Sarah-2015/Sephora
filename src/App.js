@@ -6,12 +6,8 @@ import { createHashRouter, RouterProvider} from "react-router-dom";
 import MasterLayout from './Components/MasterLayout/MasterLayout';
 import Login from './Components/Login/Login';
 import Register from './Components/Register/Register';
-import Home from './Components/Home/Home';
 import Cart from './Components/Cart/Cart';
-
-
 import Hair from './Components/Hair/Hair';
-
 import Skincare from './Components/Skincare/Skincare';
 import Fragnance from './Components/Fragnance/fragnance';
 import Makeup from './Components/Makeup/Makeup';
@@ -55,8 +51,8 @@ function App() {
   
 
   let routes=createHashRouter([{path:"/" ,element:<MasterLayout/>,children:[
-    {index:true, element:<Home/>},
-    {path:"/makeup/:id", element:<Makeup/>},
+    
+    {index:true, element:<Makeup/>},
     {path:"/fragnance/:id", element:<Fragnance/>},
     {path:"/bath/:id", element:<Bath/>},
     {path:"/hair/:id", element:<Hair/>},

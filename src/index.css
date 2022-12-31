@@ -16,3 +16,17 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.add{
+  opacity: 0;
+
+}
+
+.product:hover .add{
+  
+    opacity: 1;
+  
+}
+.product:hover .image{
+ transform: scale(1.03);
+
+}

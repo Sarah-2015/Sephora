@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from "axios";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import styles from './products.module.css'
+
+
 import Home from '../Home/Home'
 import {  useParams } from 'react-router-dom';
 import { useAuth } from '../../Context/global';
@@ -55,20 +53,20 @@ export default function Tools() {
      
           <div className='container  py-5'>
   
-      </div>
+    
             <div className="row g-5">
                 {products.map((product,index)=><div key={index} className="col-lg-3 col-md-4 text-center ">
                  
               
-                    <div className= {`nav-link cursor border py-3 ${styles.product}`}>
-                    <img className={styles.immg} src={product.heroImage} alt="product"/>  
+                    <div className= {`nav-link cursor border py-1 product `}>
+                    <img className="image" src={product.heroImage} alt="product"/>  
                     
                     
                     <p className='mt-2  px-2'>{product.displayName?.split(" ").slice(0,2).join(" ")}</p>
     
                     <p>${product.currentSku.listPrice.split("").slice(1,7).join("")}</p>
     
-                    <button onClick={()=>{if(cart) {addToCart(product);}}} className={`${styles.add} btn btn-dark`}>Add To Cart</button>
+                    <button onClick={()=>{if(cart) {addToCart(product);}}} className={`add btn btn-dark`}>Add To Cart</button>
     
                    
                     </div>
@@ -77,6 +75,7 @@ export default function Tools() {
                         
                      </div>
                 )}
+            </div>
             </div>
       
         </>

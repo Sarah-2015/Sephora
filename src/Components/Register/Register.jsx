@@ -34,7 +34,7 @@ export default function Register() {
 }
   return (
     <>
-    <div className="container w-50 m-auto border my-5 p-3 ">
+    <div className="container w-50 m-auto border  my-5 p-3 ">
     <h1 className="h4">Create account</h1>
 
      <form onSubmit={register} className='my-3' >

@@ -21,9 +21,10 @@ export default function Login() {
     }
  
   return (
-    <div className="container border rounded w-50 m-auto my-5">
+    
+    <div className="container border rounded w-50 m-auto  my-5">
    
-  
+    
     <div className=" text-center py-3">
      
   
@@ -54,6 +55,7 @@ export default function Login() {
       
       </div>
   </div>
+
  
   )
 }

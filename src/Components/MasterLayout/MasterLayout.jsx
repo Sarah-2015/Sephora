@@ -8,8 +8,10 @@ export default function MasterLayout() {
   return (
     <>
     <Navbar/>
-    
+   
     <Outlet></Outlet>
+   
+    
     </>
   )
 }
