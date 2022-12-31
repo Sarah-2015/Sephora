@@ -1,8 +1,7 @@
 {
   "files": {
-    "main.css": "/Sephora/static/css/main.f124c139.css",
-    "main.js": "/Sephora/static/js/main.ddb3b47f.js",
-    "static/media/2.jpg": "/Sephora/static/media/2.3db443b561bfb36afba7.jpg",
+    "main.css": "/Sephora/static/css/main.cbb62221.css",
+    "main.js": "/Sephora/static/js/main.481aab12.js",
     "static/media/fa-solid-900.ttf": "/Sephora/static/media/fa-solid-900.b1a653db79258eeccc5d.ttf",
     "static/media/fa-brands-400.ttf": "/Sephora/static/media/fa-brands-400.450a5c898f0b184b968b.ttf",
     "static/media/fa-solid-900.woff2": "/Sephora/static/media/fa-solid-900.41c0f706d8ce93933771.woff2",
@@ -16,11 +15,11 @@
     "static/media/slick.ttf": "/Sephora/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/Sephora/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/Sephora/index.html",
-    "main.f124c139.css.map": "/Sephora/static/css/main.f124c139.css.map",
-    "main.ddb3b47f.js.map": "/Sephora/static/js/main.ddb3b47f.js.map"
+    "main.cbb62221.css.map": "/Sephora/static/css/main.cbb62221.css.map",
+    "main.481aab12.js.map": "/Sephora/static/js/main.481aab12.js.map"
   },
   "entrypoints": [
-    "static/css/main.f124c139.css",
-    "static/js/main.ddb3b47f.js"
+    "static/css/main.cbb62221.css",
+    "static/js/main.481aab12.js"
   ]
 }
